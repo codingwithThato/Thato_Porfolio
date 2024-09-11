@@ -15,8 +15,6 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/codingwithThato/thato_porfolio?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/codingwithThato/thato_porfolio?color=56BEB8">
-
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/codingwithThato/thato_porfolio?color=56BEB8" /> -->
 
   <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/codingwithThato/thato_porfolio?color=56BEB8" /> -->
