@@ -1,6 +1,8 @@
 // import React from 'react'
 import Link from "next/link";
 import { Button } from './ui/button';
+import MobileNav from './MobileNav';
+import logo from './logo.svg';
 
 import Nav from './Nav';
 const Header = () => {
@@ -10,9 +12,10 @@ const Header = () => {
 
             {/* logo --> remember to change this. */}
             <Link href='/'>
-            <h1 className="text-4xl font-semibold">
+            {/* <h1 className="text-4xl font-semibold">
                 Thato <span className="text-accent">.</span>
-            </h1>
+            </h1> */}
+                <img src={logo} alt="Thato Kalagobe" className="w-24" />
             </Link>
 
             {/* desktop nav + contact me btn */}
@@ -25,11 +28,11 @@ const Header = () => {
 
             {/* mobile navbar */}
             <div className="xl:hidden">
-                mobile navbar
+                <MobileNav />
             </div>
         </div>
     </header>
   )
 }
 
-export default Header
+export default Header;

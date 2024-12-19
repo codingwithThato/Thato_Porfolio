@@ -34,7 +34,7 @@ module.exports = {
   				foreground: 'hsl(var(--popover-foreground))'
   			},
 			// primary: '#e9e3d3',
-			primary: '#e9edc9',
+			primary: '#52796F',
 			accent: {
 				// DEFAULT: 'hsl(var(--accent))',
 				// foreground: 'hsl(var(--accent-foreground))'
