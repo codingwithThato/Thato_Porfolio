@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Profile from "../components/profile.PNG";
+import Profile from "../components/profile.png";
 
 const Photo = () => {
   return <div className="w-full h-full relative">
