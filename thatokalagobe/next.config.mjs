@@ -1,24 +1,16 @@
-import path from 'path';
-
 const nextConfig = {
   reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
       use: [
-        {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[hash].[ext]',
-            outputPath: 'static/images/',
-          },
-        },
+        '@svgr/webpack', // Modern SVG handling
       ],
     });
 
     return config;
   },
-  // distDir: 'build', // Optional: custom build directory
+  distDir: 'build', // Optional: custom build directory
 };
 
 export default nextConfig;
