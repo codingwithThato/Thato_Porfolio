@@ -18,7 +18,7 @@ const nextConfig = {
 
     return config;
   },
-  distDir: 'build', // Optional: custom build directory
+  // distDir: 'build', // Optional: custom build directory
 };
 
 export default nextConfig;
