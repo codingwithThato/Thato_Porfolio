@@ -4,7 +4,13 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.svg$/,
       use: [
-        '@svgr/webpack', // Modern SVG handling
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            outputPath: 'static/images/',
+          },
+        },
       ],
     });
 
