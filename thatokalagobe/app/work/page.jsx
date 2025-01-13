@@ -27,6 +27,8 @@ const projects = [
     title: 'Kicthen of Secrets',
     description: 'Kitchen of Secrets is a game where you have to cook for supernatural creatures. In this assignment, we were tasked with designing a restaurant simulator, a dynamic blend of activities in the customer floor and the bustling kitchen . On the customer floor, our role is to manage seating, orders, and ensure customer satisfaction. This includes orchestrating the seating process, taking orders, and accommodating customer expectations. Meanwhile, in the kitchen, the chaos of food preparation unfolds. Different chefs handle various aspects, from cooking to plating. Additional features like inventory and accounting can be incorporated to enhance the experience.',
     stack: [{name: 'React'}, {name: 'C++'}, {name: 'Bootstrap'}, {name: 'React MUI'}],
+    name: "Javascript",
+    image: "/assets/work/kitchen-of-secrets.png",
   },
   {
     num: "02",
