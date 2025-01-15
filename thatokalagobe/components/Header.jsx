@@ -2,7 +2,9 @@
 import Link from "next/link";
 import { Button } from './ui/button';
 import MobileNav from './MobileNav';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+
+// import Image from 'next/image';
 
 import Nav from './Nav';
 const Header = () => {
@@ -12,10 +14,10 @@ const Header = () => {
 
             {/* logo --> remember to change this. */}
             <Link href='/'>
-            {/* <h1 className="text-4xl font-semibold">
+            <h1 className="text-4xl font-semibold">
                 Thato <span className="text-accent">.</span>
-            </h1> */}
-                <img src={logo} alt="Thato Kalagobe" className="w-24" />
+            </h1>
+                {/* <Image src={logo} height="150" width="150" alt="Thato Kalagobe" className="w-24" /> */}
             </Link>
 
             {/* desktop nav + contact me btn */}

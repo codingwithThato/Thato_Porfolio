@@ -3,7 +3,8 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { CiMenuFries } from 'react-icons/ci'
-import logo from './logo.svg';
+// import logo from './logo.svg';
+// import Image from 'next/image';
 
 const links = [
     { 
@@ -38,8 +39,8 @@ const MobileNav = () => {
             {/* logo */}
             <div className='mt-32 mb-40 text-center text-2xl'>
                 <Link href='/'>
-                    <img src={logo} alt='logo not loaded' className='w-20 h-20 mx-auto' />
-                    {/* <h1 className='font-semibold'>Thato <span className='text-accent'>.</span></h1> */}
+                    {/* <Image src={logo} alt='logo not loaded' className='w-20 h-20 mx-auto' /> */}
+                    <h1 className='font-semibold'>Thato <span className='text-accent'>.</span></h1>
                 </Link>
             </div>
             {/* nav links */}
