@@ -22,11 +22,7 @@ const about = {
     {
       fieldName: "Name", 
       fieldValue: "Thato Kalagobe",
-    },
-    {
-      fieldName: "Phone", 
-      fieldValue: "(+27) 79 877 0395",
-    },
+    }, 
     {
       fieldName: "Email",
       fieldValue: "thatokalagobe@proton.me",
