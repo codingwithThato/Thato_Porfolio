@@ -9,25 +9,25 @@ const aboutMe = [
     num: '01',
     title: 'Web Development',
     description: 'I create responsive websites that are displayed on all devices desktops and smartphones.',
-    href: '',
+    href: 'http://thatokalagobe.vercel.app',
   },
   {
     num: '02',
     title: 'UI/UX Design',
     description: 'I value simple content structure, clean design patterns, and thoughtful interactions.',
-    href: '',
+    href: '', // either my figma or my dribble??
   },
   {
     num: '03',
-    title: 'App Development',
-    description: 'I value simple content structure, clean design patterns, and thoughtful interactions.',
+    title: 'Game Development',
+    description: 'I create games using Unity and C#.',
     href: '',
   },
   {
     num: '04',
     title: 'Content Creation',
     description: 'I consistently create content on various platforms, including YouTube, Instagram, and TikTok.',
-    href: '',
+    href: 'http://bio.site/thatokalagobe',
   },
 ]
 
