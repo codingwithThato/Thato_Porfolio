@@ -1,8 +1,8 @@
 "use client";
 
-import {Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { TextArea } from "@/components/ui/textarea";
+import { Textarea } from "@/components/ui/textarea";
 
 import { 
   Select,
@@ -30,7 +30,7 @@ const info = [
   {
     icon: FaMapMarkerAlt,
     title: "Address",
-    value: "",
+    value: "Pretoria/Johannesburg, South Africa",
   },
 ];
 
@@ -46,7 +46,7 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           {/* form */}
-          <div className="xl:h-[54%] order-2 xl:order-none">
+          <div className="xl:w-[54%] order-2 xl:order-none">
               <form className="flex flex-col gap-6 p-10 bg-[#3f5d52] rounded-xl">
                 <h3 className="text-4xl text-accent">Let's collaborate!</h3>
                 <p className="text-white/60">I'm always open to new projects, collaborations or employment opportunities. Feel free to reach out to me.</p>
@@ -56,6 +56,7 @@ const Contact = () => {
                   <Input type="firstname" placeholder="Firstname" />
                   <Input type="lastname" placeholder="Lastname" />
                   <Input type="email" placeholder="Email" />
+                  <Input type="tel" placeholder="Phone" />
                 </div>
 
                 {/* select */}
@@ -67,18 +68,36 @@ const Contact = () => {
                     <SelectGroup>
                       <SelectLabel>Select a service</SelectLabel>
                       <SelectItem value="est">Web Development</SelectItem>
-                      <SelectItem value="cst">Mobile Development</SelectItem>
-                      <SelectItem value="mst">UI/UX Design</SelectItem>
+                      <SelectItem value="cst">UI/UX Design</SelectItem>
+                      <SelectItem value="mst">Game Development</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>
+                
+                {/* textarea */}
+                <Textarea 
+                className="h-[200px]"
+                placeholder="Type your message here" />
+
+                {/* btn */}
+                <Button size="md" className="max-w-40">Send Message</Button> 
               </form>
           </div>
 
 
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            
+            <ul className="flex flex-col gap-10">
+              {info.map(({ icon: Icon, title, value }, index) => (
+                <li key={index} className="flex items-center gap-6 text-white/60">
+                  <Icon className="text-accent text-[24px]" />
+                  <div className="flex flex-col">
+                    <p className="text-white/60">{title}</p>
+                    <h3 className="text-xl">{value}</h3>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
