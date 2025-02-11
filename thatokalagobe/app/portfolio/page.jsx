@@ -6,18 +6,20 @@ import {
   FaCss3,
   FaReact,
   // FaTs,
-  // FaFigma,
+  FaFigma,
   FaJs,
 } from "react-icons/fa";
 
 import {
-  SiTailwindcss, SiNextdotjs,
+  SiTailwindcss, SiNextdotjs, SiTypescript, SiUnity
 }
 from "react-icons/si";
 
+import Link from "next/link";
+
 const about = {
   title: "About Me",
-  description: "I am a full-stack developer, UX/UI designer, and social media influencer/YouTuber with a passion for creating beautiful and functional products. I have experience with a variety of technologies, including HTML, CSS, JavaScript, React, TypeScript, and more. I also have strengths in the Adobe Creative Suite as well as Figma. I have a strong eye for design and a keen understanding of user experience, which allows me to create websites and applications that are both visually appealing and easy to use.",
+  description: "I am a full-stack developer, UX/UI designer, game developer and social media influencer/YouTuber with a passion for creating beautiful and functional products. I have experience with a variety of technologies, including HTML, CSS, Java, C++, React, TypeScript, Unity and more. I also have strengths in the Adobe Creative Suite as well as Figma. I have a strong eye for design and a keen understanding of user experience, which allows me to create websites and applications that are both visually appealing and easy to use.",
   info: [
     {
       fieldName: "Name", 
@@ -28,8 +30,16 @@ const about = {
       fieldValue: "thatokalagobe@proton.me",
     },
     {
-      fieldName: "Location",
-      fieldValue: "Johannesburg/Pretoria, South Africa",
+      fieldName: "Experience",
+      fieldValue: "4 years",
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "South African",
+    },
+    {
+      fieldName: "Freelance",
+      fieldValue: "Available",
     },
     {
       fieldName: "Languages",
@@ -40,7 +50,7 @@ const about = {
 
 const experience = {
   title: "Experience",
-  description: "I have experience in a variety of areas, including web development, UX/UI design, and social media marketing. I have worked with a number of clients to create websites, applications, and social media campaigns that meet their needs and exceed their expectations. I have also worked on a number of personal projects, including my YouTube channel and social media accounts, where I create content related to web development, design, and technology.",
+  description: "I have experience in a variety of areas, including web development, and social media marketing. I have worked with a number of clients to create websites, applications, and social media campaigns that meet their needs and exceed their expectations. I have also worked on a number of personal projects, including my YouTube channel and social media accounts, where I create content related to web development, design, and technology.",
   info: [
     // its acc: company , position , duration
     {
@@ -76,7 +86,7 @@ const education = {
     },
     {
       institution: "University of Pretoria",
-      degree: "Honours in Information Science",
+      degree: "Honours in Information Science specialising in Multimedia",
       duration: "2025-Present",
     }
   ],
@@ -84,40 +94,53 @@ const education = {
 
 const skills = {
   title: "My skills",
-  description: "EDIT: I have experience with a variety of technologies, including HTML, CSS, JavaScript, React, TypeScript, and more. I also have strengths in the Adobe Creative Suite as well as Figma. I have a strong eye for design and a keen understanding of user experience, which allows me to create websites and applications that are both visually appealing and easy to use.",
+  description: "I have experience with a variety of technologies, including HTML, CSS, JavaScript, React, TypeScript, and more. I also have strengths in the Adobe Creative Suite as well as Figma. I have a strong eye for design and a keen understanding of user experience, which allows me to create websites and applications that are both visually appealing and easy to use.",
   skillList: [
     {
       icon: <FaHtml5 />,
       name: "HTML 5",
+      link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     },
     {
       icon: <FaCss3 />,
       name: "CSS 3",
+      link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
     {
       icon: <FaJs />,
       name: "JavaScript",
+      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
     {
       icon: <FaReact />,
       name: "React",
+      link: "https://reactjs.org/",
     },
     {
-      // icon: <FaTs />,
+      icon: <SiTypescript />,
       name: "TypeScript",
+      link: "https://www.typescriptlang.org/",
     },
     {
-      // icon: <FaFigma />,
+      icon: <FaFigma />,
       name: "Figma",
+      link: "https://www.figma.com/",
     },
     {
       icon: <SiTailwindcss />,
       name: "Tailwind CSS",
+      link: "https://tailwindcss.com/",
     },
     {
       icon: <SiNextdotjs />,
       name: "Next.js",
+      link: "https://nextjs.org/",
     }, 
+    {
+      icon: <SiUnity />,
+      name: "Unity",
+      link: "https://unity.com/",
+    },
   ]
 }
 
@@ -190,6 +213,7 @@ const Portfolio = () => {
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.company}</p>
+                            {/* <p className="text-white/60">{item.description}</p> */}
                           </div> 
                         </li>
                       );
@@ -229,13 +253,13 @@ const Portfolio = () => {
                     <h3 className="text-4xl font-bold">{skills.title}</h3>
                     <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
                   </div>
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-[30px] gap-4">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-[30px] gap-4 mb-5">
                     {skills.skillList.map((skill, index) => {
                       return <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#7b9a8a] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
+                              <Link href={skill.link} className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</Link>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize">{skill.name}</p>
