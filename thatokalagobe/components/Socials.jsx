@@ -5,19 +5,19 @@ import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
 const socialLinks = [
     {
         icon: <FaGithub />,
-        path: ""
+        path: "https://github.com/codingwithThato"
     },
     {
         icon: <FaLinkedin />,
-        path: ""
+        path: "https://www.linkedin.com/in/thato-kalagobe-b1a091311"
     },
     {
         icon: <FaInstagram />,
-        path: ""
+        path: "https://www.instagram.com/thato.xvii"
     },
     {
         icon: <FaYoutube />,
-        path: ""
+        path: "https://www.youtube.com/@thatokalagobe"
     },
 
 ];

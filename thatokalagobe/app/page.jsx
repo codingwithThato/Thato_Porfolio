@@ -17,14 +17,14 @@ const Home = () => {
             <p className="max-w-[500px] mb-9 text-white/80">I excel at crafting elegant digital experiences and I am proficient in various programming and technologies.</p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-4">
-              <Button
+              {/* <Button
               variant="outline"
               size="lg"
               className="uppercase flex items-center gap-2"
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
-              </Button>
+              </Button> */}
               <div className="mb-8 xl:mb-0"> 
                 <Socials 
                 containerStyles="flex gap-6" 
