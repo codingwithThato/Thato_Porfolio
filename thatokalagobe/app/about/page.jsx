@@ -9,7 +9,7 @@ const aboutMe = [
     num: '01',
     title: 'Web Development',
     description: 'I create responsive websites that are displayed on all devices desktops and smartphones.',
-    href: 'http://thatokalagobe.vercel.app',
+    href: '',
   },
   {
     num: '02',
@@ -27,7 +27,7 @@ const aboutMe = [
     num: '04',
     title: 'Content Creation',
     description: 'I consistently create content on various platforms, including YouTube, Instagram, and TikTok.',
-    href: 'http://bio.site/thatokalagobe',
+    href: '',
   },
 ]
 
@@ -53,9 +53,9 @@ const About = () => {
               <div className="w-full flex justify-between items-center">
                 <div className="text-5xl font-extrabold text-outline text-transparent 
                 group-hover:text-outline-hover transition-all duration-500 ">{service.num}</div>
-                <Link href={service.href} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
+                <div className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                   <BsArrowDownRight className="text-primary text-3xl"/> 
-                </Link>
+                </div>
               </div>
               <div>
                 {/* title */}
